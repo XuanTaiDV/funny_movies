@@ -1,0 +1,16 @@
+.container.mt-3
+  .row
+    .col-md-3.text-end
+      = link_to "#" do
+        i class="fas fa-home"
+        | Funny Movies
+    .col-md-3.float-right
+    .col-md-5.float-right
+      = form_with url: session_path do
+        .row
+          .col
+            = text_field :email, "Email", class: 'form-control'
+          .col
+            = password_field :password, "Password", class: 'form-control'
+          .col
+            = submit_tag :submit, class: 'form-control'

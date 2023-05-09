@@ -1,0 +1,10 @@
+= form_with(model: @sharing_youtube_video) do |form|
+  - if @sharing_youtube_video.errors.any?
+    div style="color: red"
+      h2 = "#{pluralize(@sharing_youtube_video.errors.count, "error")} prohibited this sharing_youtube_video from being saved:"
+      ul
+        - @sharing_youtube_video.errors.each do |error|
+          li = error.full_message
+
+  div
+    = form.submit

@@ -1,0 +1,19 @@
+.container
+  .row.d-flex.justify-content-center
+    h1.text-center Sign Up
+    .col-md-6
+      = form_with model: @user do |f|
+        .form-group.mb-3
+          = f.label :name
+          = f.text_field :name, class: 'form-control', placeholder: 'Enter your fullname'
+        .form-group.mb-3
+          = f.label :email
+          = f.text_field :email, class: 'form-control', placeholder: 'Enter your email'
+        .form-group.mb-3
+          = f.label :password
+          = f.password_field :password, class: 'form-control', placeholder: 'Enter your password'
+        .form-group.mb-3
+          = f.label :password_confirmation
+          = f.password_field :password_confirmation, class: 'form-control', placeholder: 'Enter your password'
+        .form-group.mb-3.text-center
+          = f.submit :submit, class: 'btn btn-info'
